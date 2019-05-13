@@ -6,7 +6,7 @@
 //importScripts('/__/firebase/5.5.6/firebase-messaging.js');
 //importScripts('/__/firebase/init.js');
 
-var messaging = firebase.messaging();
+//var messaging = firebase.messaging();
 
 /**
  * Here is is the code snippet to initialize Firebase Messaging in the Service
