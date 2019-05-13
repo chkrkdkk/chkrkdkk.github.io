@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  function initFcm(){
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDtE-iZDcy5u3UDwu4r97WuJvKzoKb0-tw",
+      authDomain: "web-push-test-fc483.firebaseapp.com",
+      databaseURL: "https://web-push-test-fc483.firebaseio.com",
+      projectId: "web-push-test-fc483",
+      storageBucket: "web-push-test-fc483.appspot.com",
+      messagingSenderId: "425149788979",
+      appId: "1:425149788979:web:c08b9f6f7625f706"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  }
+</script>
+</head>
+<body onload="javascript:initFcm();">
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
 </body>
