@@ -44,8 +44,9 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     
-    messaging = firebase.messaging();
-  
+    if(messaging == ''){
+      messaging = firebase.messaging();
+    }
     messaging.usePublicVapidKey("BLHJGSUp3sclHMKRV-PovXoCw35EqF1x-7OysjG8IqLLjYFA14RtZC1ILsoudxBpjhp0B7qxixQ6Um__gookFdY");
     
     messaging.requestPermission().then(function() {
