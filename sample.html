@@ -27,11 +27,9 @@ var IndexedDB = {
 	dataBaseName: null,
 	checkDB : function(){
 		if (!this.indexedDB) {
-			if(SAFEON_IS_DEBUG)
 				console.log("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
 			return false;
 		} else{
-			if(SAFEON_IS_DEBUG)
 				console.log("Your browser does support a indexedDB");
 			return true;
 		}
@@ -124,7 +122,6 @@ var IndexedDB = {
 	},
 	insert: function(val, callback){
 		var database = this.getConnection();
-		if(SAFEON_IS_DEBUG)
 			console.log("IndexedDB.schemaName="+IndexedDB.schemaName);
 		database.onsuccess = function() {
 			var db = database.result;
@@ -167,15 +164,12 @@ var IndexedDB = {
 		if(!this.dataBaseName)this.dataBaseName = "SampleDataBase";
 		var database = this.indexedDB.deleteDatabase(this.dataBaseName);
 		database.onsuccess = function () {
-			if(SAFEON_IS_DEBUG)
 				console.log("Deleted database successfully");
 		};
 		database.onerror = function () {
-			if(SAFEON_IS_DEBUG)
 				console.log("Couldn't delete database");
 		};
 		database.onblocked = function () {
-			if(SAFEON_IS_DEBUG)
 				console.log("Couldn't delete database due to the operation being blocked");
 		};
 	}
